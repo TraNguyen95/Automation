@@ -58,6 +58,7 @@ public class BaseControl {
                 return By.className(body);
             default:
                 return By.xpath(locator);
+
         }
     }
 }
