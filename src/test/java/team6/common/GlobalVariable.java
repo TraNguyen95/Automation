@@ -16,4 +16,6 @@ public  class GlobalVariable {
     private static ExtentHtmlReporter htmlReporter;
 
     public static WebDriver driver;
+
+    //luan commnent
 }
