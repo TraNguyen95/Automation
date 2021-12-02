@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public  class GlobalVariable {
-    public static String eviroment;
+    public static String environment;
 
     private static ExtentTest extentTest;
 

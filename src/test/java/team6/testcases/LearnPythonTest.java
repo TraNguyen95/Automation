@@ -10,7 +10,7 @@ import team6.pages.*;
 
 import java.io.IOException;
 
-public class LearnJavaScriptTest extends BaseTest {
+public class LearnPythonTest extends BaseTest {
     private WebDriver driver;
     private DashboardPage dashboardPage;
     public SignInPage signInPage;
@@ -23,7 +23,7 @@ public class LearnJavaScriptTest extends BaseTest {
 
 
     @Test
-    public void learnJavaScriptTest() throws IOException, InterruptedException {
+    public void learnPythonTest() throws IOException, InterruptedException {
         test1.log(Status.INFO,"1.Start Test");
         readFileJson = new ReadFileJson();
 
@@ -56,7 +56,7 @@ public class LearnJavaScriptTest extends BaseTest {
         homePage1.learnJavaScriptClick();
         System.out.println("end log");
 
-        test1.log(Status.INFO,"6.Redirect to JavaScript Quiz Page");
+        test1.log(Status.INFO,"6.Redirect to Python Page");
         LearnJavaScriptPage learnJavaScriptPage = new LearnJavaScriptPage(driver);
         learnJavaScriptPage.studyJavaNowClick();
         JsIntroductonPage jsIntroductonPage = new JsIntroductonPage(driver);

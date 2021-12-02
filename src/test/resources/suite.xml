@@ -3,12 +3,11 @@
     <parameter name="browserType" value="chrome" />
     <parameter name="appURL"
                value="https://www.w3schools.com/" />
-    <parameter name="enviroment" value="qa" />
+    <parameter name="environment" value="qa" />
     <parameter name="urlUserStaging" value="./src/test/resources/staging/user.json" />
     <test name="sample test">
         <classes>
-
-            <class name="team6.testcases.LearnCSSTest">
+            <class name="team6.testcases.LearnJavaScriptTest">
             </class>
         </classes>
     </test>

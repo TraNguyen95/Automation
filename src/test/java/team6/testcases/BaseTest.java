@@ -39,8 +39,8 @@ public class BaseTest {
         test1  = extent.createTest("Test Extent Report", "Team 6");
         ReportHelper.setTest(test1);
 
-        evName  = context.getCurrentXmlTest().getParameter("enviroment");
-        GlobalVariable.eviroment = evName;
+        evName  = context.getCurrentXmlTest().getParameter("environment");
+        GlobalVariable.environment = evName;
           }
     @AfterSuite
     public void endExtent() {
@@ -89,6 +89,7 @@ public class BaseTest {
     }
 
     @Parameters({ "browserType", "appURL" })
+
     @BeforeClass
     public void initializeTestBaseSetup(String browserType, String appURL) {
         try {

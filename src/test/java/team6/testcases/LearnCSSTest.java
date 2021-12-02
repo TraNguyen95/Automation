@@ -1,17 +1,12 @@
 package team6.testcases;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import team6.common.User;
 import team6.helper.ReadFileJson;
-import team6.pages.DashboardPage;
-import team6.pages.SignInPage;
+import team6.pages.*;
 
 import java.io.IOException;
 
@@ -39,22 +34,31 @@ public class LearnCSSTest extends BaseTest {
 
         test1.log(Status.INFO,"3.Login ");
         signInPage.signIn(user);
+
         Thread.sleep(2000);
         signInPage.verifyDashboardPage();
 
         dashboardPage = new DashboardPage(driver);
-
+        System.out.println("start log");
         test1.log(Status.INFO,"4.Redirect to Home Page");
         dashboardPage.backHome();
-        dashboardPage.verifyHomepage();
+        HomePage homePage = new HomePage(driver);
+        homePage.verifyHomepage();
+        System.out.println("end log 1");
 
+        HomePage homePage1 = new HomePage(driver);
         test1.log(Status.INFO,"5.Redirect to CSS Tutorial Page");
-        dashboardPage.learnCssClick();
+        homePage1.learnCssClick();
+//        dashboardPage.learnCssClick();
+        System.out.println("end log");
 
+        LearnCssPage learnCssPage = new LearnCssPage(driver);
         test1.log(Status.INFO,"6.Redirect to CSS Quiz Page");
-        dashboardPage.cssQuizBtnClick();
-        dashboardPage.startQuizBtnClick();
-        dashboardPage.crlQuestion();
+        learnCssPage.cssQuizBtnClick();
+        LearnCssQuizPage learnCssQuizPage = new LearnCssQuizPage(driver);
+        learnCssQuizPage.startQuizBtnClick();
+        QuizCssTestPage quizCssTestPage = new QuizCssTestPage(driver);
+        quizCssTestPage.crlQuestion();
 
 
     }

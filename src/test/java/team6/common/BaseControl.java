@@ -28,11 +28,14 @@ public class BaseControl {
     public WebElement getElement() {
 
         By e = getLocatorFromString(locator);
+        System.out.println(e);
         return driver.findElement(e);
     }
+
     public void click() {
         wait.until(ExpectedConditions.elementToBeClickable(getElement()));
         getElement().click();
+//        System.out.println("abc");
     }
 
     public void getText() {

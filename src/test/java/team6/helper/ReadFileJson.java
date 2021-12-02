@@ -18,7 +18,7 @@ public class ReadFileJson {
 
 
     public static User readFileUser() throws IOException {
-        String ev = GlobalVariable.eviroment;
+        String ev = GlobalVariable.environment;
         String path = FILE_PATH_XML +  "/src/test/resources/" + ev + "/user.json";
         System.out.println(path);
         Reader reader = Files.newBufferedReader(Paths.get(path));

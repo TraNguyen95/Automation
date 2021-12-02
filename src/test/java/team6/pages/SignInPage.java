@@ -18,7 +18,7 @@ public class SignInPage extends PageBase {
     WebDriver driver;
     private By accountInput = By.id("modalusername");
     private By passwordInput = By.id("current-password");
-    private By signinBtn = By.className("_1VfsI");
+    private By signInBtn = By.className("_1VfsI");
     private By loginBtn = By.id("w3loginbtn");
     ExtentTest test = ReportHelper.getTest();
 
@@ -38,7 +38,7 @@ public class SignInPage extends PageBase {
 //        wait.until(ExpectedConditions.elementToBeClickable(accountInput));
         driver.findElement(accountInput).sendKeys(user.account);
         driver.findElement(passwordInput).sendKeys(user.password);
-        driver.findElement(signinBtn).click();
+        driver.findElement(signInBtn).click();
 
     }
     public void verifyDashboardPage() {
