@@ -1,14 +1,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Page Object test example">
-    <parameter name="browserType" value="chrome" />
-    <parameter name="appURL"
-               value="https://www.w3schools.com/" />
-    <parameter name="environment" value="qa" />
-    <parameter name="urlUserStaging" value="./src/test/resources/staging/user.json" />
-    <test name="sample test">
+<suite name="GRID SAMPLE TEST" thread-count="2" parallel="classes">
+    <listeners>
+        <listener class-name="listener.BaseTestListener"></listener>
+    </listeners>
+    <test name="GRID TEST WITH SERIAL EXECTION WITH BROWSER IE" thread-count="2" parallel="classes">
+        <parameter name ="browserType" value="Chrome"/>
+        <parameter name="environment" value="qa" />
         <classes>
-            <class name="team6.testcases.LearnJavaScriptTest">
-            </class>
+            <class name ="testcase.TC_01"/>
+            <class name ="testcase.TC_02"/>
+            <class name ="testcase.TC_03"/>
+            <class name ="testcase.TC_04"/>
+            <class name ="testcase.TC_05"/>
         </classes>
     </test>
 </suite>
